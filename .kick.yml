@@ -1,0 +1,11 @@
+version: 1
+from: "infracamp/kickstart-flavor-base:testing"
+
+command:
+  build:
+    - "sudo scripts/install.sh"
+    - "composer update"
+
+
+  init:
+    - "sudo  vendor/bin/cloudtool etc/ /etc/"
